@@ -1,0 +1,52 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root{
+  font-family: "Inter",sans-serif;
+}
+.image-animate{
+animation: alternate-reverse 1.5s ease-out;
+}
+.div-animate{
+animation: backwards 1.5s ease;
+}
+@keyframes div{
+  0%{
+    opacity: 0;
+    right:-1000px
+  }
+  50%{
+    right: -100px;
+    opacity: 0.5;
+  }
+  70%{
+    right: -15px;
+    opacity: 0.7;
+  }
+ 100%{
+    opacity: 1;
+    right:-0px
+  }
+}
+@keyframes imagea{
+  0%{
+    opacity: 0;
+    left: -1000px;
+    transform: scale(0.1);
+  }
+  50%{
+    opacity: 0.5;
+    left: -1px;
+    transform: scale(0.7);
+  }
+  0%{
+    opacity: 1;
+    left: 0;
+    transform: scale(1.1);
+  }
+}
