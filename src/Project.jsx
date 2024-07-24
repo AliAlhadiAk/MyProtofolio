@@ -5,9 +5,11 @@ import image3 from './Authentication-project.jpeg'
 import eccom from './Eccomerce.jpg'
 import app from './WhatsApp Image 2024-07-11 at 14.46.10_02aa515a.jpg'
 import ai from './Ai Voice Asistant.jpg'
+import { FaGithub } from 'react-icons/fa';
 
 
 const Project = () => {
+  const [hover,setHover] = useState(false)
   const [projects, setProjects] = useState([
     {
       title: "Food-DeliveryApp",
@@ -44,11 +46,12 @@ const Project = () => {
     },
     {
       title: "Ai Voice Assistant",
-      description: "A powerful voice assistant with abilities of ChatGPT and Dall-E, poviding you the best of both worlds",
+      description: "A powerful ai voice assistant with abilities of ChatGPT and Dall-E, poviding you the best of both worlds",
       technologies: ["React Native", "Javascript","ChatGPT OpenAI","Dall-E"],
       image:ai
       
     },
+
   ]);
 
   return (
@@ -57,17 +60,21 @@ const Project = () => {
       <div>
         {projects.map((project, index) => (
           <div key={index} className="mb-8 flex flex-wrap lg:justify-center lg:flex">
-            <div className='w-full lg:w-1/4'>
-              {/* Assuming project.img is the URL of the image */}
-              <img 
+            <div className='w-full lg:w-1/4 ' >
+             
+              
+                  <img 
                 width={150}
                 height={150} 
                 className='mb-6 rounded image-animate'
                 src={project.image}
               />
+               <a href='https://github.com/AliAlhadiAk?tab=repositories'> <FaGithub /></a>
+             
             </div>
             <div className='w-full max-w-xl lg:w-3/4 div-animate'>
                 <h6 className='mb-2 font-semibold'>{project.title}</h6>
+            
                 <p className=',b-4 text-neutral-400'>{project.description}</p>
                 {project.technologies.map((tech,index)=>(
                     <span key={index}
